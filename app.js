@@ -140,7 +140,7 @@ async function displayAlbums() {
 }
 async function main() {
   //get the list of songs from the server
-  await getSongs("songs/ncs");
+  await getSongs("songs/a");
   playMusic(songs[0], true);
   //Display all the albums on the page
   displayAlbums();
