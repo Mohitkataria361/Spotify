@@ -33,7 +33,7 @@ async function getSongs(folder) {
   // var audio = new Audio(songs[0]);
   // audio.play();
   let songUL = document
-    .querySelector(".songsList")
+  .querySelector(".songsList")
     .getElementsByTagName("ul")[0];
   songUL.innerHTML = ""; // Clear existing list items
   for (const song of songs) {
@@ -133,8 +133,7 @@ async function displayAlbums() {
   //load the playlist when card is clicked
   Array.from(document.getElementsByClassName("card")).forEach((e) => {
     e.addEventListener("click", async (item) => {
-      songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`);
-      playMusic(songs[0]);
+      await getSongs(`songs/${item.currentTarget.dataset.folder}`);
     });
   });
 }
